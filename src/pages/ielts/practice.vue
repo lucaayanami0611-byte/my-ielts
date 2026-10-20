@@ -1,5 +1,6 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import words from './listening179.json'
+import { resolveAssetUrl } from '~/composables/assets'
 
 const ws = reactive(words.map((v) => {
   const item = {
@@ -10,13 +11,13 @@ const ws = reactive(words.map((v) => {
     },
     result: {
       checked: false,
-      errorWords: [],
+      errorWords: [] as string[],
     },
   }
   return item
 }))
 
-function onKeydown(e, word) {
+function onKeydown(e: KeyboardEvent, word: string) {
   if (e.key === '`') {
     e.preventDefault()
     play(word)
@@ -25,7 +26,7 @@ function onKeydown(e, word) {
 
 function play(word: string) {
   const audio = document.createElement('audio')
-  audio.src = `/179_audios/${word}.mp3`
+  audio.src = resolveAssetUrl(`179_audios/${word}.mp3`)
   audio.play()
 }
 function next(index: number) {

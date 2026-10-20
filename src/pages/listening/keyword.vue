@@ -1,10 +1,11 @@
 <script setup>
 import words from './listening179.json'
+import { resolveAssetUrl } from '~/composables/assets'
 
 const ws = reactive(words)
 function play(word) {
   const audio = document.createElement('audio')
-  audio.src = `179_audios/${word}.mp3`
+  audio.src = resolveAssetUrl(`179_audios/${word}.mp3`)
   audio.play()
 }
 

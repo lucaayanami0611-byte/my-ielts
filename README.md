@@ -136,4 +136,6 @@ pnpm run dev
 pnpm run build
 ```
 
+个人安装到 iPhone 或 Windows 的方法见 [PERSONAL_APP.md](./PERSONAL_APP.md)。
+
 ## 禁止将本项目用于任何商业目的！！！

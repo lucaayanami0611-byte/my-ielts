@@ -15,3 +15,11 @@ const router = createRouter({
 })
 app.use(router)
 app.mount('#app')
+
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => {
+    const serviceWorkerUrl = new URL('sw.js', document.baseURI)
+    navigator.serviceWorker.register(serviceWorkerUrl)
+      .catch(error => console.error('Service worker registration failed:', error))
+  })
+}

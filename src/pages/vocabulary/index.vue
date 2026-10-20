@@ -1,6 +1,7 @@
 <!-- eslint-disable eslint-comments/no-unlimited-disable -->
 <script setup generic="T extends any, O extends any">
 import vocabulary from './vocabulary'
+import { resolveAssetUrl } from '~/composables/assets'
 
 const CHAPTER_KEY = 'vocabulary_chapter'
 
@@ -128,7 +129,7 @@ function play(audioPath) {
     audio.currentTime = 0
   }
   audio = document.createElement('audio')
-  audio.src = audioPath
+  audio.src = resolveAssetUrl(audioPath)
   audio.play()
 }
 
@@ -306,7 +307,7 @@ function copyAllError() {
                         </div>
                         <div class="justify-items-end">
                           <audio controls class="chapter">
-                            <source :src="`vocabulary/audio/${refVocabulary[category].audio}`" type="audio/mpeg">
+                            <source :src="resolveAssetUrl(`vocabulary/audio/${refVocabulary[category].audio}`)" type="audio/mpeg">
                           </audio>
                         </div>
                       </div>

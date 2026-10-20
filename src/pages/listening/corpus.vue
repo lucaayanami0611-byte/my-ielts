@@ -1,9 +1,10 @@
 <script setup>
 import chapterData from './spelling_convention'
+import { resolveAssetUrl } from '~/composables/assets'
 
 function play(word) {
   const audio = document.createElement('audio')
-  audio.src = `179_audios/${word}.mp3`
+  audio.src = resolveAssetUrl(`179_audios/${word}.mp3`)
   audio.play()
 }
 

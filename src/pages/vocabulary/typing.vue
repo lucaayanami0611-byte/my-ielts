@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import vocabulary from './vocabulary'
+import { resolveAssetUrl } from '~/composables/assets'
 
 const CHAPTER_KEY = 'vocabulary_typing_chapter'
 const chapters = Object.keys(vocabulary)
@@ -48,7 +49,7 @@ function playAudio() {
     audio.currentTime = 0
   }
   audio = document.createElement('audio')
-  audio.src = audioPath
+  audio.src = resolveAssetUrl(audioPath)
   audio.play()
 }
 

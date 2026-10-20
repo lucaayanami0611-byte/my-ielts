@@ -5,6 +5,7 @@
 dist
 dist-ssr
 node_modules
+src-tauri/target
 .idea/
 *.log
 # git rm --cached auto-imports.d.ts

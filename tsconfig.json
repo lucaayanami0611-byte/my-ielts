@@ -24,5 +24,10 @@
       "~/*": ["src/*"]
     }
   },
-  "exclude": ["dist", "node_modules", "src/pages/vocabulary/vocabulary.js"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "src-tauri/target",
+    "src/pages/vocabulary/vocabulary.js"
+  ]
 }
