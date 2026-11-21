@@ -44,8 +44,8 @@ const showMobileMenu = ref(false)
     <nav class="fixed z-30 w-full border-b border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-gray-800">
       <div class="mx-auto max-w-screen-2xl flex items-center justify-between">
         <div class="flex items-center justify-start">
-          <router-link to="/" class="mr-14 flex">
-            <span class="hidden self-center whitespace-nowrap text-2xl font-semibold sm:flex dark:text-white">My
+          <router-link to="/" class="mr-3 flex lg:mr-14">
+            <span class="flex self-center whitespace-nowrap text-xl font-semibold sm:text-2xl dark:text-white">My
               <span class="ml-1 text-red-600"> IELTS™</span>
             </span>
 
